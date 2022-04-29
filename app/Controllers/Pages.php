@@ -25,26 +25,6 @@ class Pages extends BaseController
         ];
         return view('pages/contact', $data);
     }
-    public function login()
-    {
-        $data = [
-            'title' => 'Login | Sudig'
-        ];
-        return view('pages/login', $data);
-    }
-    public function dashboard()
-    {
-        $data = [
-            'title' => 'Dashboard | Sudig'
-        ];
-        return view('pages/dashboard', $data);
-    }
-    public function register()
-    {
-        $data = [
-            'title' => 'Register | Sudig'
-        ];
-        return view('pages/register', $data);
-    }
+
     // -----------------------------------------------------------------------
 }

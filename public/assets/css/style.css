@@ -840,9 +840,10 @@ select.form-control:not([size]):not([multiple]) {
   margin-top: -1px;
 }
 .card .card-header h4 {
-  font-size: 16px;
+  font-size: 28px;
   line-height: 28px;
   color: #6777ef;
+  padding-left: 5px;
   padding-right: 10px;
   margin-bottom: 0;
 }
@@ -2130,7 +2131,7 @@ h6 .badge {
 /* 3.18 Navbar */
 .navbar {
   height: 70px;
-  left: 250px;
+  left: 0px;
   right: 5px;
   position: absolute;
   z-index: 890;

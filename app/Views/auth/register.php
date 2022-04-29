@@ -1,6 +1,6 @@
-<?= $this->extend('layout/template2'); ?>
+<?= $this->extend('./layout/template3'); ?>
 
-<?= $this->section('content2'); ?>
+<?= $this->section('content3'); ?>
 <div id="app">
     <section class="section">
         <div class="container mt-5">
@@ -11,49 +11,46 @@
                     </div>
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h4>Register</h4>
+                            <h4>Daftar</h4>
                         </div>
                         <div class="card-body">
-                            <form method="POST">
-                                <div class="row">
-                                    <div class="form-group col-6">
-                                        <label for="first_name">First Name</label>
-                                        <input id="first_name" type="text" class="form-control" name="first_name" autofocus>
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="last_name">Last Name</label>
-                                        <input id="last_name" type="text" class="form-control" name="last_name">
+
+                            <?= view('Myth\Auth\Views\_message_block') ?>
+
+                            <form action="<?= route_to('register') ?>" method="post">
+                                <?= csrf_field() ?>
+                                <div class="form-group">
+                                    <label for="username"><?= lang('Auth.username') ?></label>
+                                    <input type="username" class="form-control <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?= lang('Auth.username') ?>" value="<?= old('username') ?>">
+                                    <div class="invalid-feedback">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input id="email" type="email" class="form-control" name="email">
+                                    <label for="email"><?= lang('Auth.email') ?></label>
+                                    <input type="email" class="form-control <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>" name="email" placeholder="<?= lang('Auth.email') ?>" value="<?= old('email') ?>">
+                                    <small id="emailHelp" class="form-text text-muted"><?= lang('Auth.weNeverShare') ?></small>
                                     <div class="invalid-feedback">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="form-group col-6">
-                                        <label for="password" class="d-block">Password</label>
-                                        <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password">
-                                        <div id="pwindicator" class="pwindicator">
-                                            <div class="bar"></div>
-                                            <div class="label"></div>
-                                        </div>
+                                        <label for="password" class="d-block"><?= lang('Auth.password') ?></label>
+                                        <input type="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.password') ?>" autocomplete="off" name="password">
                                     </div>
                                     <div class="form-group col-6">
-                                        <label for="password2" class="d-block">Password Confirmation</label>
-                                        <input id="password2" type="password" class="form-control" name="password-confirm">
+                                        <label for="pass_confirm"" class=" d-block"><?= lang('Auth.repeatPassword') ?></label>
+                                        <input type="password" class="form-control <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.repeatPassword') ?>" autocomplete="off" name="pass_confirm">
                                     </div>
                                 </div>
 
-                                <div class="form-divider">
-                                    Your Home
+                                <!-- <div class="form-divider">
+                                    Alamat
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-6">
-                                        <label>Country</label>
+                                        <label>Negara</label>
                                         <select class="form-control selectric">
                                             <option>Indonesia</option>
                                             <option>Palestine</option>
@@ -63,7 +60,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-6">
-                                        <label>Province</label>
+                                        <label>Provinsi</label>
                                         <select class="form-control selectric">
                                             <option>West Java</option>
                                             <option>East Java</option>
@@ -72,27 +69,28 @@
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-6">
-                                        <label>City</label>
+                                        <label>Kota</label>
                                         <input type="text" class="form-control">
                                     </div>
                                     <div class="form-group col-6">
-                                        <label>Postal Code</label>
+                                        <label>Kode Pos</label>
                                         <input type="text" class="form-control">
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="form-group">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" name="agree" class="custom-control-input" id="agree">
-                                        <label class="custom-control-label" for="agree">I agree with the terms and conditions</label>
+                                        <label class="custom-control-label" for="agree">Saya setuju dengan syarat dan ketentuan</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary btn-lg btn-block">
-                                        Register
+                                        <?= lang('Auth.register') ?>
                                     </button>
                                 </div>
+                                <?= lang('Auth.alreadyRegistered') ?> <a href="<?= route_to('login') ?>"><?= lang('Auth.signIn') ?>
                             </form>
                         </div>
                     </div>

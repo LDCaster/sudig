@@ -5,9 +5,34 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap 5 CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <title><?= $title; ?></title>
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="http://localhost:8080/assets/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:8080/assets/modules/fontawesome/css/all.min.css">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="http://localhost:8080/assets/modules/jqvmap/dist/jqvmap.min.css">
+    <link rel="stylesheet" href="http://localhost:8080/assets/modules/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="http://localhost:8080/assets/modules/owlcarousel2/dist/assetsc/owl.carousel.min.css">
+    <link rel="stylesheet" href="http://localhost:8080/assets/modules/owlcarousel2/dist/assetsc/owl.theme.default.min.css">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="http://localhost:8080/assets/css/style.css">
+    <link rel="stylesheet" href="http://localhost:8080/assets/css/components.css">
+    <!-- Start GA -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-94034622-3');
+    </script>
+    <!-- /END GA -->
 </head>
 
 <body>
@@ -16,16 +41,29 @@
 
     <?= $this->renderSection('content1'); ?>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- General JS Scripts -->
+    <script src="http://localhost:8080/assets/modules/jquery.min.js"></script>
+    <script src="http://localhost:8080/assets/modules/popper.js"></script>
+    <script src="http://localhost:8080/assets/modules/tooltip.js"></script>
+    <script src="http://localhost:8080/assets/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://localhost:8080/assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="http://localhost:8080/assets/modules/moment.min.js"></script>
+    <script src="http://localhost:8080/assets/js/stisla.js"></script>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- JS Libraies -->
+    <script src="http://localhost:8080/assets/modules/jquery.sparkline.min.js"></script>
+    <script src="http://localhost:8080/assets/modules/chart.min.js"></script>
+    <script src="http://localhost:8080/assets/modules/owlcarousel2/dist/owl.carousel.min.js"></script>
+    <script src="http://localhost:8080/assets/modules/summernote/summernote-bs4.js"></script>
+    <script src="http://localhost:8080/assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
+    <!-- Page Specific JS File -->
+    <script src="http://localhost:8080/assets/js/page/index.js"></script>
+
+    <!-- Template JS File -->
+    <script src="http://localhost:8080/assets/js/scripts.js"></script>
+    <script src="http://localhost:8080/assets/js/custom.js"></script>
+
 </body>
 
 </html>

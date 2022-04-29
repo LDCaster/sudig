@@ -41,14 +41,8 @@
         <div class="main-wrapper main-wrapper-1">
             <div class="navbar-bg"></div>
 
-            <!-- Top Bar Dashboard -->
-            <?= $this->include('layout/topbar'); ?>
-
-            <!-- Sidebar Dashboard -->
-            <?= $this->include('layout/sidebar'); ?>
-
             <!-- Section Main -->
-            <?= $this->renderSection('content2'); ?>
+            <?= $this->renderSection('content3'); ?>
 
             <!-- General JS Scripts -->
             <script src="http://localhost:8080/assets/modules/jquery.min.js"></script>
