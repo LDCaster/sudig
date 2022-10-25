@@ -27,4 +27,11 @@ class Auth extends BaseController
         ];
         return view('auth/forgot', $data);
     }
+    public function reset()
+    {
+        $data = [
+            'title' => 'Reset Password | Sudig'
+        ];
+        return view('auth/reset', $data);
+    }
 }

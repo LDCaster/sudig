@@ -1,38 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title><?= $title; ?></title>
-    <!-- General CSS Files -->
-    <link rel="stylesheet" href="http://localhost:8080/assets/modules/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost:8080/assets/modules/fontawesome/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('logo.png') ?>">
+    <title>SUDIG | TEMPLATE SURAT NO 1</title>
 
-    <!-- CSS Libraries -->
-    <link rel="stylesheet" href="http://localhost:8080/assets/modules/jqvmap/dist/jqvmap.min.css">
-    <link rel="stylesheet" href="http://localhost:8080/assets/modules/summernote/summernote-bs4.css">
-    <link rel="stylesheet" href="http://localhost:8080/assets/modules/owlcarousel2/dist/assetsc/owl.carousel.min.css">
-    <link rel="stylesheet" href="http://localhost:8080/assets/modules/owlcarousel2/dist/assetsc/owl.theme.default.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="http://localhost:8080/assets/css/style.css">
-    <link rel="stylesheet" href="http://localhost:8080/assets/css/components.css">
-    <!-- Start GA -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="http://localhost:8080/assets/css/main.css">
 
-        gtag('config', 'UA-94034622-3');
-    </script>
-    <!-- /END GA -->
+
+
 </head>
 
 <body>
@@ -41,28 +28,11 @@
 
     <?= $this->renderSection('content1'); ?>
 
-    <!-- General JS Scripts -->
-    <script src="http://localhost:8080/assets/modules/jquery.min.js"></script>
-    <script src="http://localhost:8080/assets/modules/popper.js"></script>
-    <script src="http://localhost:8080/assets/modules/tooltip.js"></script>
-    <script src="http://localhost:8080/assets/modules/bootstrap/js/bootstrap.min.js"></script>
-    <script src="http://localhost:8080/assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
-    <script src="http://localhost:8080/assets/modules/moment.min.js"></script>
-    <script src="http://localhost:8080/assets/js/stisla.js"></script>
 
-    <!-- JS Libraies -->
-    <script src="http://localhost:8080/assets/modules/jquery.sparkline.min.js"></script>
-    <script src="http://localhost:8080/assets/modules/chart.min.js"></script>
-    <script src="http://localhost:8080/assets/modules/owlcarousel2/dist/owl.carousel.min.js"></script>
-    <script src="http://localhost:8080/assets/modules/summernote/summernote-bs4.js"></script>
-    <script src="http://localhost:8080/assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
 
-    <!-- Page Specific JS File -->
-    <script src="http://localhost:8080/assets/js/page/index.js"></script>
-
-    <!-- Template JS File -->
-    <script src="http://localhost:8080/assets/js/scripts.js"></script>
-    <script src="http://localhost:8080/assets/js/custom.js"></script>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
 </body>
 

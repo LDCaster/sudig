@@ -6,8 +6,9 @@
         <div class="d-flex flex-wrap align-items-stretch">
             <div class="col-lg-4 col-md-6 col-12 order-lg-1 min-vh-100 order-2 bg-white">
                 <div class="p-4 m-3">
-                    <img src="http://localhost:8080/assets/img/logo.png" alt="logo" width="80" class="shadow-light rounded-circle mb-5 mt-2">
-                    <h4 class="text-dark font-weight-normal">Selamat Datang <span class="font-weight-bold">Sudig</span></h4>
+                    <img src="http://localhost:8080/assets/img/logo.png" alt="logo" width="80" class="shadow-light rounded-circle mb-2 mt-2">
+                    <h4 class="text-dark font-weight-normal">Selamat Datang </h4>
+                    <!-- <span class="font-weight-bold">Sudig</span> -->
                     <p class="text-muted">Sebelum anda memulai, Anda harus Login atau Daftar. Jika Anda belum memiliki Akun.</p>
 
                     <?= view('Myth\Auth\Views\_message_block') ?>
@@ -80,10 +81,10 @@
                 <div class="absolute-bottom-left index-2">
                     <div class="text-light p-5 pb-2">
                         <div class="mb-5 pb-3">
-                            <h1 class="mb-2 display-4 font-weight-bold">Easy Work Anywhere</h1>
-                            <h5 class="font-weight-normal text-muted-transparent">Surat Digital </h5>
+                            <h1 class="mb-2 display-4 font-weight-bold" style="text-shadow: 2px 2px black;">Kerja Mudah Dimana Saja</h1>
+                            <h4 class="font-weight-normal text-muted-transparent" style="text-shadow: 2px 2px black;">Surat Digital </h4>
                         </div>
-                        Photo by <a class="text-light bb" target="_blank" href="https://unsplash.com/photos/a8lTjWJJgLA"></a> on <a class="text-light bb" target="_blank" href="">Unsplash</a>
+                        <!-- Photo by <a class="text-light bb" target="_blank" href="https://unsplash.com/photos/a8lTjWJJgLA"></a> on <a class="text-light bb" target="_blank" href="">Unsplash</a> -->
                     </div>
                 </div>
             </div>

@@ -4,49 +4,49 @@
 <!-- Main Content -->
 <div class="main-content">
     <section class="section">
-        <div class="section-header">
+        <div class="section-header" style="background-color: #f9f9f9;">
             <h1>User List</h1>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Image</th>
-                            <th scope="col">Username</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Role</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php $i = 1; ?>
-                        <?php foreach ($users as $user) : ?>
+        <div class="section-body">
+            <a href="<?= base_url('tambah_akun'); ?>" class="btn btn-info mb-3"><i class="fas fa-plus-circle"></i> Tambah Akun</a>
+            <?php if (session()->getFlashdata('success')) : ?>
+                <div class="alert alert-success" role="alert">
+                    <?= session()->getFlashdata('success'); ?>
+                </div>
+            <?php endif; ?>
+            <div class="row">
+                <div class="col-lg-12">
+                    <table class="table">
+                        <thead>
                             <tr>
-                                <th scope="row"><?= $i++; ?></th>
-                                <td><img src="/assets/img/avatar/<?= user()->user_img; ?>" height="50px"></td>
-                                <td><?= $user->username; ?></td>
-                                <td><?= $user->email; ?></td>
-                                <td><?= $user->name; ?></td>
-                                <td><a href=" <?= base_url('user/user_list/' . $user->userid); ?>" class="btn btn-info">Detail</a></td>
+                                <th scope="col">No</th>
+                                <th scope="col">Image</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Action</th>
                             </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            <?php $i = 1; ?>
+                            <?php foreach ($users as $user) : ?>
+                                <tr>
+                                    <th scope="row"><?= $i++; ?></th>
+                                    <td><img src="/assets/img/avatar/<?= $user->user_img; ?>" height="50px"></td>
+                                    <td><?= $user->username; ?></td>
+                                    <td><?= $user->email; ?></td>
+                                    <td><?= $user->name; ?></td>
+                                    <td>
+                                        <a href=" <?= base_url('user/detail/' . $user->userid); ?>" class="btn btn-info">Detail</a>
+                                        <!-- <a href="/user/hapus/<?= $user->userid; ?>" class=" btn-hapus btn-sm" type="button" onclick="return confirm('Apakah anda yakin ingin hapus user ini?')">Hapus</a> -->
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </section>
-
-</div>
-<footer class="main-footer">
-    <div class="footer-left">
-        Copyright &copy; <div class="bullet"></div> Your Website <a href=""><?= date('Y'); ?></a>
-    </div>
-    <div class="footer-right">
-
-    </div>
-</footer>
-</div>
 </div>
 <?= $this->endsection(); ?>
